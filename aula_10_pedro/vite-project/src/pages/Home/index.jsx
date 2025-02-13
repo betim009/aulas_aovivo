@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import Header from "../../components/header";
 
 function Home() {
 
@@ -20,6 +21,7 @@ function Home() {
 
     return (
         <>
+            <Header />
             <h2>Home</h2>
 
             {computadores.map((element) => (

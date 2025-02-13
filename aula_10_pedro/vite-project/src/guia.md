@@ -8,14 +8,21 @@
 
 
     useEffect(() => {
+        // Criou o código
         async function fetchAPI() {
             const url = "";
+
+            // Você está pedindo/solicitando os dados
             const requisicao = await fetch(url);
+
+            // é o RETORNO/RESULTADO dos dados
             const resposta = await requisicao.json();
 
+            // SALVANDO OS DADOS
             setNome(resposta.results)
         }
 
+        // executou o código
         fetchAPI()
     }, [])
 
@@ -50,3 +57,30 @@
                 <p>{element.title}</p>
             </div>
     ))}
+
+
+
+### Função de component
+
+    function Home() {
+    return (
+        <>
+
+        
+        </>
+    )
+
+    }
+    export default home
+
+
+
+    export default function Home() {
+    return (
+        <>
+
+        
+        </>
+    )
+
+    }
