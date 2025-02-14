@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <!-- Importação do CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <h2 class="title">Bem vindo!</h2>
+
+    <h4>{{ res_home.usuario }}</h4>
+
+    <ul>
+        {% for item in res_home.csv %}
+            <li>{{ item.id }}</li>
+            <li>{{ item.nome }}</li>
+            <li>{{ item.idade }}</li>
+        {%  endfor %}
+    </ul>
+</body>
+
+</html>
