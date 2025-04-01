@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        const urlUsers = "https://jsonplaceholder.typicode.com/users";
+        const urlPosts = "https://jsonplaceholder.typicode.com/posts";
+
+        async function fetchApi() {
+            const reqUsers = await fetch(urlUsers);
+            const reqPosts = await fetch(urlPosts);
+
+            const resUsers = await reqUsers.json();
+            const resPosts = await reqPosts.json();
+
+            resPosts.forEach((post, indexPost) => {
+                const findName = resUsers.find((user, indexUser) => post.userId == user.id).name;
+                post.nameUser = findName
+            })
+
+            console.log(resPosts)
+        }
+
+        fetchApi();
+
+
+
+    </script>
+</body>
+
+</html>
