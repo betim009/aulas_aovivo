@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,39 +13,36 @@
         }
     </style>
 </head>
+
 <body>
-    <p id="p1"></p>
-    <p id="p2"></p>
-    <p id="p3"></p>
-    <p id="p4"></p>
-    <p id="p5"></p>
 
+    <ul id="ul-futebol">
+        <li>Futebol</li>
+        <li>Messi</li>
+    </ul>
 
+    <ol id="ol-basquete">
+        <li>Basquete</li>
+        <li>Michael Jordan</li>
+    </ol>
 
-
-
+    <!-- Criar uma UL de atletar de MMA -->
 
 
     <script>
-        let nomeCompleto = "Bernardo Azevedo de Oliveira"
-        let idade = ""
-        let cidade = ""
-        let nomeMae = ""
-        let nomePai = ""
+        let ulFutebol = document.getElementById("ul-futebol");
+        let olBasquete = document.getElementById("ol-basquete");
+        // Resgatar a ul de atleta de MMA
 
-        let meuParagrafo = document.getElementById("p1")       
-        meuParagrafo.textContent = nomeCompleto
-
-        // abaixo fazer funciona o p2
-        
-
-        // abaixo fazer funciona o p3
+        ulFutebol.innerHTML += "<li>Cristiano Ronaldo</li>"
+        // Criar + 5 jogadores
 
 
-        // abaixo fazer funciona o p4
+        olBasquete.innerHTML += "<li>Kobe Bryant </li>"
+        // Criar + jogadores
 
-
-        // abaixo fazer funciona o p5
+        // Criar os ateltas de MMA
     </script>
 </body>
+
 </html>
