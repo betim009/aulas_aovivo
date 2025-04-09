@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="result">
+
+    </div>
+
+
+
+    <script>
+
+        async function load() {
+            const req = await fetch('https://67b5223ba9acbdb38ed16600.mockapi.io/api/v1/foods/');
+            const res = await req.json();
+
+
+            const resultado = document.getElementById('result')
+
+            res.map(e => (
+                resultado.innerHTML += `
+                    <p>${e.id}</p>
+                    <p>${e.nome}</p>
+                    <img src="${e.imagem}"/>
+                `
+            ))
+            console.log(res);
+        }
+
+        load();
+    </script>
+</body>
+
+</html>
