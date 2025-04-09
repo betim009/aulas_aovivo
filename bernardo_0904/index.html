@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade</title>
+
+    <style>
+        body {
+            background-color: #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #painel {
+            background-color: #ededed;
+            width: 80%;
+            height: 60vh;
+            display: flex;
+        }
+
+        #btns {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            width: 20%;
+            align-items: center;
+            justify-content: space-around;
+            background-color: rgba(0, 0, 0, 0.189);
+        }
+
+        button {
+            width: 120px;
+            background-color: darkgray;
+            border: none;
+            height: 30px;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="painel">
+        <div id="btns">
+            <button id="btn-entrar" onclick="handleEntrar()">Entrar</button>
+            <button>Cadastrar</button>
+            <button>Ranking</button>
+            <button>Configurações</button>
+        </div>
+
+        <div id="painel-resultado">
+
+        </div>
+    </div>
+
+
+
+    <script>
+        let btnEntrar = document.getElementById('btn-entrar');
+        let painelResultado = document.getElementById('painel-resultado');
+
+        function handleEntrar() {
+            painelResultado.innerHTML = "<h2>Bem vindo na pagina de entrar</h2>"
+        }
+
+        // fazer os outros botões funcionarem
+    </script>
+</body>
+
+</html>
