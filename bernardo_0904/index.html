@@ -58,14 +58,21 @@
         </div>
     </div>
 
-
+    
 
     <script>
         let btnEntrar = document.getElementById('btn-entrar');
         let painelResultado = document.getElementById('painel-resultado');
 
         function handleEntrar() {
-            painelResultado.innerHTML = "<h2>Bem vindo na pagina de entrar</h2>"
+            let elementos = `
+                <h2>Bem vindo na pagina de entrar</h2>
+                <input type="text" placeholder="email" />
+                <input type="text" placeholder="senha" />
+                <button>Entrar</button>
+            `
+
+            painelResultado.innerHTML = elementos;
         }
 
         // fazer os outros botões funcionarem
